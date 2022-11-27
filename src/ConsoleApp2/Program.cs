@@ -2,12 +2,16 @@ using FsHttp;
 using FsHttp.CSharp;
 
 
-var httpclient = new HttpClient();
+using var httpclient = new HttpClient();
 
-
-var res = await "https://reqres.in/api/users".Post()
+using var res = await "https://reqres.in/api/user"
+    .Post()
     .CacheControl("no-cache")
-    .Configure(config => config.SetHttpClient(httpclient))
+    .Configure(config =>
+    {
+        config.SetHttpClient(httpclient);
+        return config;
+    })
     .Body()
     .Json("""
     {
@@ -15,7 +19,6 @@ var res = await "https://reqres.in/api/users".Post()
         "job": "leader"
     }
     """)
-    
     .SendAsync();
 
-Console.WriteLine(res);
+Console.WriteLine(await res.ToJsonAsync());
