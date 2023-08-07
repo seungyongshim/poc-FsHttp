@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FsHttp" Version="10.0.0" />
+    <PackageReference Include="FsHttp" Version="11.0.0" />
     <PackageReference Include="FsHttp.FSharpData" Version="10.0.0" />
   </ItemGroup>
 

@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FsHttp" Version="10.0.0" />
+    <PackageReference Include="FsHttp" Version="11.0.0" />
   </ItemGroup>
 
 </Project>
